@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 :root {
   --main-color: #1e1f4b;
   --second-color: #706fe5;
+  --third-color: #2e3e5c;
   --white: #ffffff;
 }
 
@@ -101,7 +102,10 @@ img {
 #home {
   font-family: "Poppins", sans-serif;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 4fr 3fr;
+  align-items: center;
+  justify-content: center;
+  padding: 4.375rem 1.25rem;
 }
 
 #home h1 {
@@ -110,6 +114,7 @@ img {
   font-weight: 700;
   line-height: 110px;
   letter-spacing: 0.2px;
+  margin-bottom: 1.5rem;
 }
 
 #home .title {
@@ -152,4 +157,129 @@ img {
 .right-bottom {
   right: 0;
   bottom: 0;
+}
+
+#home p {
+  font-size: 1.25rem;
+  color: var(--third-color);
+  font-weight: 400;
+  max-width: 555px;
+  margin-bottom: 1.25rem;
+}
+
+.home-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-buttons li:first-child a {
+  background: var(--second-color);
+  border-radius: 12px;
+  padding: 10px 40px;
+  font-weight: 600;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.home-buttons li:first-child a:hover {
+  background: var(--third-color);
+}
+
+.home-buttons li:nth-child(2) a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--third-color);
+}
+
+.home-buttons li:nth-child(2) a::before {
+  content: "";
+  width: 48px;
+  height: 48px;
+  transition: 0.5s;
+  background: url("../img/icons/button_play.svg");
+}
+
+.home-buttons li:nth-child(2) a:hover::before {
+  background: url("../img/icons/button_play_hover.svg");
+}
+
+.home-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-right .people-image img {
+  height: 496px;
+}
+
+.home-right .employees img {
+  position: absolute;
+  width: 279px;
+  height: 171px;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, 50%);
+}
+
+.home-right::after {
+  content: "";
+  width: 83px;
+  height: 83px;
+  background: url("../img/icons/sem_eclipse.svg") no-repeat center center;
+  position: absolute;
+  bottom: -110px;
+  right: 98px;
+  transform: translate(-50%, -50%);
+}
+
+.home-right::before {
+  content: "";
+  width: 23rem;
+  height: 23rem;
+  border-radius: 50%;
+  border: 8px solid var(--second-color);
+  background: hsla(241, 69%, 67%, 0.15);
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-52%);
+  z-index: -1;
+}
+
+.icons-software img {
+  position: absolute;
+  animation: animaIconsHome 1s infinite alternate;
+}
+
+.icons-software img:nth-child(1) {
+  height: 70px;
+  left: -46%;
+  top: 0%;
+}
+
+.icons-software img:nth-child(2) {
+  height: 102px;
+  left: -30%;
+  top: 8%;
+}
+
+.icons-software img:nth-child(3) {
+  height: 125px;
+  left: 30%;
+  top: 8%;
+}
+
+@keyframes animaIconsHome {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5px);
+  }
 }
