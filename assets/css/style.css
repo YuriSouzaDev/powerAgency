@@ -307,9 +307,88 @@ img {
   line-height: 1.2;
   color: var(--main-color);
   letter-spacing: 0.2px;
+  text-transform: capitalize;
 }
 
 .partners-icons {
   display: flex;
   gap: 5rem;
+}
+
+/* Works Section */
+
+#works {
+  font-family: "Poppins", sans-serif;
+  padding: 6.875rem 1.25rem 9.25rem 1.25rem;
+}
+
+#works h2 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  margin-bottom: 0.875rem;
+}
+
+.title-works p {
+  opacity: 0.8;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.works-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1.8125rem;
+}
+
+.works-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.works-container p,
+.works-container span {
+  opacity: 0.8;
+  color: var(--third-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.works-container h3 {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.works-container p {
+  max-width: 555px;
+}
+
+.work-1 {
+  grid-area: 1 / 1 / 7 / 7;
+}
+
+.work-2 {
+  grid-area: 1 / 7 / 4 / 10;
+}
+
+.work-3 {
+  grid-area: 1 / 10 / 4 / 13;
+}
+
+.work-4 {
+  grid-area: 4 / 7 / 7 / 10;
+}
+
+.work-5 {
+  grid-area: 4 / 10 / 7 / 13;
 }
