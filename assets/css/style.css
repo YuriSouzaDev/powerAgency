@@ -708,9 +708,16 @@ body {
   font-size: 1.125rem;
 }
 
+.footer-bottom div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .company-links {
   display: flex;
   gap: 7.2rem;
+  width: max-content;
 }
 
 .company-links a {
@@ -724,6 +731,19 @@ body {
 
 .company-links a:hover {
   color: var(--second-color);
+}
+
+.contact-us {
+  padding: 10px 40px;
+  background-color: var(--second-color);
+  width: max-content;
+  border-radius: 12px;
+  color: var(--white);
+  transition: color 0.3s;
+}
+
+.contact-us:hover {
+  color: var(--third-color);
 }
 
 .directs {
